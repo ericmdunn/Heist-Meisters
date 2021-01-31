@@ -23,6 +23,8 @@ func update_movement():
 	else:
 		motion.x = lerp(motion.x, 0, FRICTION)
 
-	
 
+func _input(event):
+	if event.is_action_pressed("toggle_flashlight"):
+		$Flashlight.enabled = not $Flashlight.enabled
 
