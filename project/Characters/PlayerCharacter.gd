@@ -2,6 +2,7 @@ extends "res://Characters/TemplateCharacter.gd"
 
 
 var motion = Vector2()
+var FLASHLIGHT_ALLOWED = false
 
 func _physics_process(delta):
 	update_movement()
@@ -25,6 +26,6 @@ func update_movement():
 
 
 func _input(event):
-	if event.is_action_pressed("toggle_flashlight"):
+	if event.is_action_pressed("toggle_flashlight") and FLASHLIGHT_ALLOWED:
 		$Flashlight.enabled = not $Flashlight.enabled
 
