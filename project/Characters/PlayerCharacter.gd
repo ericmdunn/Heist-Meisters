@@ -4,6 +4,7 @@ extends "res://Characters/TemplateCharacter.gd"
 var motion = Vector2()
 var FLASHLIGHT_ALLOWED = false
 
+
 func _physics_process(delta):
 	update_movement()
 	move_and_slide(motion)

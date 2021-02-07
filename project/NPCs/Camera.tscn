@@ -27,13 +27,11 @@ tracks/0/keys = {
 [node name="Camera" type="Node2D"]
 
 [node name="ArmSprite" type="Sprite" parent="."]
-position = Vector2( 16, 0 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
 
 [node name="CameraBody" type="KinematicBody2D" parent="."]
-position = Vector2( 28.8966, 0 )
-rotation = 1.5708
+position = Vector2( 16, 0 )
 collision_layer = 4
 collision_mask = 3
 script = ExtResource( 4 )
@@ -49,7 +47,7 @@ shape = SubResource( 1 )
 disabled = true
 
 [node name="Flashlight" parent="CameraBody" instance=ExtResource( 1 )]
-position = Vector2( 16, 0 )
+position = Vector2( 18, 0 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CameraBody"]
 autoplay = "CameraRotation"
