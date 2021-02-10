@@ -51,8 +51,10 @@ func update_path():
 
 
 func make_path():
-	var new_destination = possible_destinations[randi() % possible_destinations.size() - 1]
-	path = navigation.get_simple_path(global_position, new_destination.position)
+	var random_number = randi() % possible_destinations.size() - 1
+	print(random_number)
+	var new_destination = possible_destinations[random_number]
+	path = navigation.get_simple_path(global_position, new_destination.position, false)
 	print(path)
 
 
