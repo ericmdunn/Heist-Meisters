@@ -48,13 +48,19 @@ func update_path():
 		$Timer.start()
 	elif path.size() > 1:
 		path.remove(0)
+# This is how Yann did it in the class. I did it the way above; seems to work functionally the same.
+#	if path.size() == 1:
+#		if $Timer.is_stopped():
+#			$Timer.start()
+#	else:
+#		path.remove(0)
 
 
 func make_path():
-	var random_number = randi() % possible_destinations.size() - 1
+	var random_number = randi() % possible_destinations.size()
 	print(random_number)
 	var new_destination = possible_destinations[random_number]
-	path = navigation.get_simple_path(global_position, new_destination.position, false)
+	path = navigation.get_simple_path(position, new_destination.position, false)
 	print(path)
 
 
