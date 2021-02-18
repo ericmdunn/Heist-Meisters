@@ -27,11 +27,14 @@ func _physics_process(delta):
 
 
 func navigate():
-	var distance_to_destination = position.distance_to(path[0])
-	if distance_to_destination > minimum_arrival_distance:
-		move()
-	else:
-		update_path()
+	if path.size() > 0:
+		var distance_to_destination = position.distance_to(path[0])
+		if distance_to_destination > minimum_arrival_distance:
+			move()
+		else:
+			update_path()
+	elif $Timer.is_stopped():
+		make_path()
 
 
 func move():
@@ -52,16 +55,24 @@ func update_path():
 
 
 func make_path():
+	if path.size() > 0:
+		path.remove(0)
+	
 	if direction == 1:
 		for destination in possible_destinations:
-			path.append(destination.position)
+			path.push_back(destination.position)
 		direction = -1
+		print(direction)
 		print(path)
 	else:
-		for destination in range (possible_destinations.size(), 0):
-			path.append(possible_destinations[destination].position)
+		print("Possible_destinations.size() = " + str(possible_destinations.size()))
+		for destination in possible_destinations:
+			path.push_front(destination.position)
+#		for destination in range(possible_destinations.size(), 0):
+#			path.append(possible_destinations[destination].position)
 		direction = 1
-		print(path)
+		print("Direction = " + str(direction))
+		print("Path = " + str(path))
 
 # This is the old make_path which runs on random locations and uses
 # get_smple_path(), which doesn't work very well. New make_path is above
