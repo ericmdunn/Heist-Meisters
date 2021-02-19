@@ -82,7 +82,8 @@ position = Vector2( 1932.07, 1823.3 )
 position = Vector2( 1229.41, 914.107 )
 
 [node name="PlayerCharacter" parent="." index="1"]
-position = Vector2( 232.087, 1042.71 )
+position = Vector2( 396.903, 124.452 )
+rotation = 1.5708
 
 [node name="Camera" parent="Cameras" index="0" instance=ExtResource( 2 )]
 position = Vector2( 577.041, 391.062 )
@@ -120,3 +121,5 @@ rotation = 1.5708
 
 [node name="Guard" parent="Guards" index="0" instance=ExtResource( 3 )]
 position = Vector2( 125.716, 906.949 )
+
+[node name="Destinations" type="Node" parent="Guards/Guard" index="5"]
