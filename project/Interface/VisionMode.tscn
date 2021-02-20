@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Interface/VisionMode.gd" type="Script" id=1]
+
+[node name="VisionMode" type="CanvasModulate" groups=[
+"Interface",
+]]
+position = Vector2( -5, 0 )
+color = Color( 0.211765, 0.752941, 0.196078, 1 )
+script = ExtResource( 1 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true

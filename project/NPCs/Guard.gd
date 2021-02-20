@@ -19,7 +19,7 @@ export var move_in_circle = false
 func _ready():
 	randomize()
 	if move_in_circle:
-		$Timer.set_wait_time(0)
+		$Timer.set_wait_time(0.01)
 		print("Has set_wait_time been set properly?")
 		print($Timer.get_wait_time())
 	possible_destinations = destinations.get_children()
@@ -69,14 +69,9 @@ func make_path():
 		print(direction)
 		print(path)
 	else:
-#		print("Possible_destinations.size() = " + str(possible_destinations.size()))
 		for destination in possible_destinations:
 			path.push_front(destination.position)
-#		for destination in range(possible_destinations.size(), 0):
-#			path.append(possible_destinations[destination].position)
 		direction = 1
-#		print("Direction = " + str(direction))
-#		print("Path = " + str(path))
 
 # This is the old make_path which runs on random locations and uses
 # get_smple_path(), which doesn't work very well. New make_path is above
