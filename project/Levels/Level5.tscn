@@ -145,7 +145,7 @@ rotation = 1.5708
 
 [node name="Guard" parent="Guards" index="0" instance=ExtResource( 3 )]
 position = Vector2( 125.716, 906.949 )
-move_in_circle = true
+move_in_loop = true
 
 [node name="Destinations" type="Node" parent="Guards/Guard" index="5"]
 
@@ -163,11 +163,12 @@ position = Vector2( 133.191, 903.797 )
 
 [node name="Guard2" parent="Guards" index="1" instance=ExtResource( 3 )]
 position = Vector2( 896.662, 1179.69 )
-move_in_circle = true
+move_in_loop = true
 
 [node name="Destinations" type="Node2D" parent="Guards/Guard2" index="5"]
 
 [node name="Position2D" type="Position2D" parent="Guards/Guard2/Destinations" index="0"]
+position = Vector2( 2.37842, 0 )
 
 [node name="Position2D2" type="Position2D" parent="Guards/Guard2/Destinations" index="1"]
 position = Vector2( 313.951, 21.4058 )
@@ -180,7 +181,7 @@ position = Vector2( -2.37836, 416.223 )
 
 [node name="Guard3" parent="Guards" index="2" instance=ExtResource( 3 )]
 position = Vector2( 1413.49, 1176.76 )
-move_in_circle = true
+move_in_loop = true
 
 [node name="Destinations" type="Node2D" parent="Guards/Guard3" index="0"]
 position = Vector2( -516.828, 2.93335 )

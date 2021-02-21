@@ -13,16 +13,19 @@ var path = []
 
 export var minimum_arrival_distance = 5
 export var walk_speed = 0.5
-export var move_in_circle = false
+export var move_in_loop = false
 
 
 func _ready():
 	randomize()
-	if move_in_circle:
+	if move_in_loop:
 		$Timer.set_wait_time(0.01)
 		print("Has set_wait_time been set properly?")
 		print($Timer.get_wait_time())
 	possible_destinations = destinations.get_children()
+	print(name)
+	for each in possible_destinations:
+		print(each.position)
 	make_path()
 
 
@@ -62,12 +65,10 @@ func make_path():
 	if path.size() > 0:
 		path.remove(0)
 	
-	if direction == 1 or move_in_circle:
+	if direction == 1 or move_in_loop:
 		for destination in possible_destinations:
 			path.push_back(destination.position)
 		direction = -1
-		print(direction)
-		print(path)
 	else:
 		for destination in possible_destinations:
 			path.push_front(destination.position)
