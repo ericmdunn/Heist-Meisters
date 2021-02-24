@@ -662,7 +662,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 "shape": SubResource( 102 ),
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
-3/z_index = 0
+3/z_index = 2
 4/name = "FloorH"
 4/texture = ExtResource( 1 )
 4/tex_offset = Vector2( 0, 0 )
