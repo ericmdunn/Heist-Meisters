@@ -825,6 +825,8 @@ collision_mask = 1
 
 [node name="Cameras" type="Node" parent="."]
 
-[node name="Guards" type="Node2D" parent="."]
+[node name="Guards" type="Node" parent="."]
 
 [node name="Doors" type="Node" parent="."]
+
+[node name="LockedDoors" type="Node" parent="."]
