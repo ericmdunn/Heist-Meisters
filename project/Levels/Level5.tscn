@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Levels/TemplateLevel.tscn" type="PackedScene" id=1]
 [ext_resource path="res://NPCs/Camera.tscn" type="PackedScene" id=2]
 [ext_resource path="res://NPCs/Guard.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Doors/LockedDoor.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Computer/Computer.tscn" type="PackedScene" id=5]
 
 [node name="Level5" instance=ExtResource( 1 )]
 
@@ -106,6 +107,11 @@ position = Vector2( 1932.07, 1823.3 )
 visible = false
 position = Vector2( 1229.41, 914.107 )
 
+[node name="Furniture" parent="Navigation2D" index="2"]
+collision_layer = 2
+collision_mask = 5
+tile_data = PoolIntArray( 393254, -536870910, 0, 458790, -1610612734, 0 )
+
 [node name="PlayerCharacter" parent="." index="1"]
 position = Vector2( 1676.61, 265.935 )
 rotation = 1.5708
@@ -202,3 +208,7 @@ position = Vector2( 830.779, 18.4724 )
 [node name="LockedDoor" parent="LockedDoors" index="0" instance=ExtResource( 4 )]
 position = Vector2( 2266.19, 160.554 )
 rotation = 1.5708
+
+[node name="Computer" parent="Computers" index="0" instance=ExtResource( 5 )]
+position = Vector2( 2464.39, 448.354 )
+rotation = 3.14159
