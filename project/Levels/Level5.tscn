@@ -208,7 +208,10 @@ position = Vector2( 830.779, 18.4724 )
 [node name="LockedDoor" parent="LockedDoors" index="0" instance=ExtResource( 4 )]
 position = Vector2( 2266.19, 160.554 )
 rotation = 1.5708
+lock_group = "1"
 
 [node name="Computer" parent="Computers" index="0" instance=ExtResource( 5 )]
 position = Vector2( 2464.39, 448.354 )
 rotation = 3.14159
+lock_group = "1"
+[connection signal="combination" from="Computers/Computer" to="LockedDoors/LockedDoor" method="_on_Computer_combination"]
