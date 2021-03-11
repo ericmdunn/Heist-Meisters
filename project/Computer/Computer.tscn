@@ -32,7 +32,10 @@ position = Vector2( 32, 0 )
 rotation = 1.5708
 texture = ExtResource( 4 )
 
-[node name="Label" type="Label" parent="."]
+[node name="Label" type="Label" parent="." groups=[
+"labels",
+]]
+visible = false
 margin_left = 32.4709
 margin_top = -4.04886
 margin_right = 112.471

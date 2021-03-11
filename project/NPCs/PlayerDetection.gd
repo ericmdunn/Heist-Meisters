@@ -17,6 +17,7 @@ func _ready():
 func _process(delta):
 	if Player_in_FOV() and Player_in_LOS():
 		$Flashlight.color = RED
+		get_tree().call_group("suspicionMeter", "player_seen")
 	else:
 		$Flashlight.color = WHITE
 
