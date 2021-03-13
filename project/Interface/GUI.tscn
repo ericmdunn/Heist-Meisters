@@ -52,7 +52,7 @@ margin_bottom = 33.0
 [node name="Label" type="Label" parent="Control/NinePatchRect/CenterContainer/HBoxContainer"]
 margin_right = 156.0
 margin_bottom = 27.0
-text = "Suspision"
+text = "Suspicion"
 
 [node name="SuspicionMeter" type="TextureProgress" parent="Control/NinePatchRect/CenterContainer/HBoxContainer" groups=[
 "suspicionMeter",

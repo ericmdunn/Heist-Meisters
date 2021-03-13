@@ -20,7 +20,7 @@ collision_layer = 2
 collision_mask = 5
 
 [node name="PlayerCharacter" parent="." index="1"]
-position = Vector2( 476.785, 285.608 )
+position = Vector2( 140.406, 132.102 )
 
 [node name="Camera" parent="Cameras" index="0" instance=ExtResource( 2 )]
 position = Vector2( 465.662, 584.31 )
