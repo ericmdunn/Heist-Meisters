@@ -6,6 +6,10 @@ var is_disguised = false
 var can_move= true
 
 
+export var disguise_duration = 5
+export var number_of_disguises = 3
+
+
 const PLAYER_SPRITE = "res://Assets/GFX/PNG/Hitman 1/hitman1_stand.png"
 const BOX_SPRITE = "res://Assets/GFX/PNG/Tiles/tile_130.png"
 const PLAYER_OCCLUDER = "res://Characters/HumanOccluder.tres"
@@ -14,9 +18,16 @@ const PLAYER_LIGHT = "res://Assets/GFX/PNG/Hitman 1/hitman1_stand.png"
 const BOX_LIGHT = "res://Assets/GFX/PNG/Tiles/tile_130.png"
 
 
+func _ready():
+	reveal()
+
+
 func _physics_process(delta):
 	update_movement()
 	move_and_slide(motion)
+	
+	if is_disguised:
+		$DisguiseLabel.text = str($Timer.time_left).pad_decimals(2)
 
 
 func update_movement():
@@ -49,7 +60,7 @@ func _input(event):
 func toggle_disguise():
 	if is_disguised:
 		reveal()
-	else:
+	elif number_of_disguises > 0:
 		disguise()
 
 
@@ -57,6 +68,7 @@ func reveal():
 	$Sprite.texture = load(PLAYER_SPRITE)
 	$Light2D.texture = load(PLAYER_LIGHT)
 	$LightOccluder2D.occluder = load(PLAYER_OCCLUDER)
+	$DisguiseLabel.hide()
 	is_disguised = false
 	collision_layer = 1
 	can_move = true
@@ -69,3 +81,20 @@ func disguise():
 	is_disguised = true
 	collision_layer = 16
 	can_move = false
+	number_of_disguises -= 1
+	
+	$DisguiseLabel.show()
+	$DisguiseLabel.set_global_position(position + Vector2(20, -40))
+	$DisguiseLabel.set_rotation(-rotation)
+	
+	$Timer.wait_time = disguise_duration
+	$Timer.start()
+
+
+
+
+
+
+
+
+

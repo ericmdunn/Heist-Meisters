@@ -13,6 +13,7 @@ tile_data = PoolIntArray( 262171, 1073741841, 0, 262172, -536870892, 0, 262173, 
 
 [node name="Guard" parent="Guards" index="0" instance=ExtResource( 1 )]
 position = Vector2( 567.307, 348 )
+move_in_loop = true
 
 [node name="Destinations" type="Node" parent="Guards/Guard" index="5"]
 
