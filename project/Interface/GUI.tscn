@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Interface/Theme.tres" type="Theme" id=1]
 [ext_resource path="res://Assets/GFX/Interface/PNG/dotRed.png" type="Texture" id=2]
 [ext_resource path="res://Interface/SuspicionMeter.gd" type="Script" id=3]
 [ext_resource path="res://Assets/GFX/Interface/PNG/glassPanel_cornerTL.png" type="Texture" id=4]
 [ext_resource path="res://Assets/GFX/Interface/PNG/dot_shadow.png" type="Texture" id=5]
+[ext_resource path="res://Assets/GFX/PNG/Tiles/tile_156.png" type="Texture" id=6]
+[ext_resource path="res://Assets/GFX/Interface/PNG/glassPanel_cornerBR.png" type="Texture" id=7]
+[ext_resource path="res://Interface/DisguiseCounter.gd" type="Script" id=8]
 
 [node name="GUI" type="CanvasLayer"]
 
@@ -67,3 +70,45 @@ texture_under = ExtResource( 5 )
 texture_progress = ExtResource( 2 )
 fill_mode = 4
 script = ExtResource( 3 )
+
+[node name="DisguiseContainer" type="NinePatchRect" parent="Control"]
+margin_left = 30.0
+margin_top = 20.0
+margin_right = 246.0
+margin_bottom = 120.0
+texture = ExtResource( 7 )
+patch_margin_left = 12
+patch_margin_top = 12
+patch_margin_right = 12
+patch_margin_bottom = 12
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/DisguiseContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 12.0
+margin_top = 12.0
+margin_right = -12.0
+margin_bottom = -12.0
+
+[node name="Label" type="Label" parent="Control/DisguiseContainer/VBoxContainer"]
+margin_right = 192.0
+margin_bottom = 27.0
+text = "Disguises:"
+
+[node name="DisguiseCounter" type="ItemList" parent="Control/DisguiseContainer/VBoxContainer" groups=[
+"DisguiseDisplay",
+]]
+margin_top = 31.0
+margin_right = 192.0
+margin_bottom = 65.0
+items = [ "", ExtResource( 6 ), false ]
+auto_height = true
+max_columns = 6
+icon_scale = 0.5
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
