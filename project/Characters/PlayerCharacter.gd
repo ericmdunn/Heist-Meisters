@@ -111,8 +111,10 @@ func disguise():
 	$Timer.start()
 
 
-
-
+func collect_loot(loot_type):
+	var loot = Node.new()
+	loot.set_name(loot_type)
+	add_child(loot)
 
 
 

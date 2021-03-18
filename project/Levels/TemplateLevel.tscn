@@ -834,4 +834,6 @@ collision_mask = 1
 
 [node name="Computers" type="Node" parent="."]
 
+[node name="Loot" type="Node" parent="."]
+
 [node name="GUI" parent="." instance=ExtResource( 5 )]

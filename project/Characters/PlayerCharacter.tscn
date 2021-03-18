@@ -6,7 +6,9 @@
 [ext_resource path="res://Lightmaps/Flashlight.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Interface/Theme.tres" type="Theme" id=5]
 
-[node name="PlayerCharacter" instance=ExtResource( 1 )]
+[node name="PlayerCharacter" groups=[
+"Loot",
+] instance=ExtResource( 1 )]
 collision_mask = 14
 script = ExtResource( 3 )
 
