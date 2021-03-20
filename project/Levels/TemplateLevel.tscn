@@ -1,10 +1,11 @@
-[gd_scene load_steps=51 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://Tiles/Tiles.tres" type="TileSet" id=1]
 [ext_resource path="res://Characters/PlayerCharacter.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/GFX/Tilesheet/tilesheet_complete.png" type="Texture" id=3]
 [ext_resource path="res://Interface/VisionMode.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Interface/GUI.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Levels/Exit.tscn" type="PackedScene" id=6]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 64, 0, 64, 64, 0, 64 )
@@ -837,3 +838,9 @@ collision_mask = 1
 [node name="Loot" type="Node" parent="."]
 
 [node name="GUI" parent="." instance=ExtResource( 5 )]
+
+[node name="Exit" parent="." instance=ExtResource( 6 )]
+margin_left = 2285.86
+margin_top = 1815.99
+margin_right = 2485.86
+margin_bottom = 1915.99

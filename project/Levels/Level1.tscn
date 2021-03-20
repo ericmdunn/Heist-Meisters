@@ -41,3 +41,10 @@ position = Vector2( 666.423, 492.629 )
 
 [node name="Briefcase" parent="Loot" index="0" instance=ExtResource( 4 )]
 position = Vector2( 471.198, 98.7781 )
+
+[node name="Exit" parent="." index="10"]
+margin_left = 155.789
+margin_top = 380.542
+margin_right = 355.789
+margin_bottom = 480.542
+rect_rotation = 90.0

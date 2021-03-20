@@ -25,5 +25,5 @@ func player_seen():
 # Currently quits game
 # TODO: Create a game over screen
 func end_game():
-	get_tree().quit()
+	get_tree().change_scene("res://Levels/DefeatScreen.tscn")
 
