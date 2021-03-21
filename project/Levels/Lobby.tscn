@@ -27,9 +27,9 @@ anchor_bottom = 1.0
 
 [node name="Background" type="NinePatchRect" parent="CenterContainer"]
 margin_left = 312.0
-margin_top = 99.0
+margin_top = 100.0
 margin_right = 712.0
-margin_bottom = 499.0
+margin_bottom = 500.0
 rect_min_size = Vector2( 400, 400 )
 texture = ExtResource( 2 )
 patch_margin_left = 12
