@@ -100,12 +100,12 @@ expand = true
 [node name="CenterContainer" type="CenterContainer" parent="CenterContainer/Background/VBoxContainer"]
 margin_top = 222.0
 margin_right = 376.0
-margin_bottom = 290.0
+margin_bottom = 326.0
 
 [node name="GridContainer" type="GridContainer" parent="CenterContainer/Background/VBoxContainer/CenterContainer"]
 margin_left = 56.0
 margin_right = 320.0
-margin_bottom = 68.0
+margin_bottom = 104.0
 columns = 2
 
 [node name="StartButton" type="Button" parent="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer"]
@@ -121,18 +121,33 @@ margin_bottom = 29.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Start mission"
 
-[node name="QuitButton" type="Button" parent="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer"]
+[node name="TutorialButton" type="Button" parent="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer"]
 margin_top = 36.0
 margin_right = 32.0
 margin_bottom = 68.0
 rect_min_size = Vector2( 32, 32 )
 
-[node name="Label2" type="Label" parent="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer"]
+[node name="Label3" type="Label" parent="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer"]
 margin_left = 36.0
 margin_top = 38.0
 margin_right = 264.0
 margin_bottom = 65.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Tutorial"
+
+[node name="QuitButton" type="Button" parent="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer"]
+margin_top = 72.0
+margin_right = 32.0
+margin_bottom = 104.0
+rect_min_size = Vector2( 32, 32 )
+
+[node name="Label2" type="Label" parent="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer"]
+margin_left = 36.0
+margin_top = 74.0
+margin_right = 264.0
+margin_bottom = 101.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Quit Game"
 [connection signal="pressed" from="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer/TutorialButton" to="." method="_on_TutorialButton_pressed"]
 [connection signal="pressed" from="CenterContainer/Background/VBoxContainer/CenterContainer/GridContainer/QuitButton" to="." method="_on_QuitButton_pressed"]
