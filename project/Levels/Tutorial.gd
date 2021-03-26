@@ -15,7 +15,8 @@ func update_pointer_positions(objective_number):
 	objective_position.position, 1.5, Tween.TRANS_SINE, Tween.EASE_IN_OUT)
 	$Tween.start()
 	
-	$TutorialGUI/Control/NinePatchRect/Label.text = message.message
+	get_tree().call_group("Text_Box", "update_text", message.message)
+#	$TutorialGUI/Control/NinePatchRect/Label.text = message.message
 	$MessageSound.play()
 
 

@@ -1,9 +1,13 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Interface/Theme.tres" type="Theme" id=1]
 [ext_resource path="res://Assets/GFX/Interface/PNG/glassPanel_projection.png" type="Texture" id=2]
+[ext_resource path="res://Interface/TutorialGUI.gd" type="Script" id=3]
 
-[node name="TutorialGUI" type="CanvasLayer"]
+[node name="TutorialGUI" type="CanvasLayer" groups=[
+"Text_Box",
+]]
+script = ExtResource( 3 )
 
 [node name="Control" type="Control" parent="."]
 anchor_left = 1.0
@@ -45,3 +49,5 @@ autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

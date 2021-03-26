@@ -113,7 +113,7 @@ message = "The objective is that suitcase. grab it before you can get out."
 [node name="ExitMessage" parent="ObjectiveMessages" index="4" instance=ExtResource( 8 )]
 message = "GET TO THE CHOPPER!
 
-Sorry, got carried away. Leave via the exit zone."
+Sorry, I got carried away. Leave via the exit zone."
 
 [node name="Tween" type="Tween" parent="." index="15"]
 
